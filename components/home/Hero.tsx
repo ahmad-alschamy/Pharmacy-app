@@ -1,7 +1,14 @@
-export default function Hero() {
+import {getTranslations} from "next-intl/server";
+
+export default async function Hero() {
+
+    const t = await getTranslations("HomePage");
+
   return (
     <section className="section-spacing">
       <div className="container-custom">
+
+        {t("title")}
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
@@ -62,7 +69,7 @@ export default function Hero() {
                   text-white
                   px-8
                   py-4
-                  rounded-[var(--radius-md)]
+                  rounded-md
                   hover:bg-primary-hover
                   transition-colors
                   duration-300
@@ -77,7 +84,7 @@ export default function Hero() {
                   border-border
                   px-8
                   py-4
-                  rounded-[var(--radius-md)]
+                  rounded-md
                   hover:border-primary
                   transition-colors
                   duration-300

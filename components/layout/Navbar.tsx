@@ -1,32 +1,35 @@
-import Link from "next/link"
-import { Cross } from "lucide-react"
+import {Link} from "@/i18n/navigation";
 import Image from "next/image"
-import { pacifico } from "@/app/lib/fonts"
+import {getTranslations} from "next-intl/server";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const navLinks = [
   {
-    name: "Home",
+    key: "home",
     href: "/",
   },
   {
-    name: "Services",
+    key: "services",
     href: "/services",
   },
   {
-    name: "Products",
+    key: "products",
     href: "/products",
   },
   {
-    name: "About",
+    key: "about",
     href: "/about",
   },
   {
-    name: "Contact",
+    key: "contact",
     href: "/contact",
   },
 ]
 
-export default function Navbar() {
+export default async function Navbar() {
+
+  const t = await getTranslations("Navbar");
+  
   return (
     <header className="border-b border-border bg-white sticky top-0 z-50">
       <div className="container-custom">
@@ -54,23 +57,14 @@ export default function Navbar() {
               >
                 NaturVital
               </h2>
-
-              {/* <p 
-               className={`
-                  ${pacifico.className}
-                  text-md
-                  text-muted
-                `}
-              >
-                Pharmacy
-              </p> */}
                <p 
                className={`
                   text-sm
                   text-muted
                 `}
               >
-                Apotheke
+            {t("logo")}
+
               </p>
             </div>
           </div>
@@ -78,7 +72,7 @@ export default function Navbar() {
           {/* CENTER - NAVIGATION */}
           <ul className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
-              <li key={link.name}>
+              <li key={link.key}>
                 <Link
                   href={link.href}
                   className="
@@ -101,14 +95,15 @@ export default function Navbar() {
                   hover:after:w-full
                   "
                 >
-                  {link.name}
+                  {t(link.key)}
                 </Link>
               </li>
             ))}
           </ul>
 
           {/* RIGHT - LANGUAGES */}
-          <div className="flex items-center gap-3">
+          <LanguageSwitcher />
+          {/* <div className="flex items-center gap-3">
             <button
               className="
               flex
@@ -153,7 +148,7 @@ export default function Navbar() {
                 DE
               </span>
             </button>
-          </div>
+          </div> */}
         </nav>
       </div>
     </header>

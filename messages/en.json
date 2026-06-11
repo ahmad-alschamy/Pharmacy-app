@@ -1,0 +1,23 @@
+{
+  "Navbar": {
+    "logo": "Pharmacy",
+    "home": "Home",
+    "services": "Services",
+    "products": "Products",
+    "about": "About",
+    "contact": "Contact"
+  },
+
+  "Hero": {
+    "badge": "Natural Healthcare",
+    "title1": "Trusted Care",
+    "title2": "For Your Health",
+    "description": "Reliable pharmacy services, trusted medicines, and professional healthcare support for your daily wellness.",
+    "primaryButton": "Explore Products",
+    "secondaryButton": "Contact Us"
+  },
+
+   "HomePage": {
+    "title": "Hello world!"
+  }
+}

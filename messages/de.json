@@ -1,0 +1,23 @@
+{
+  "Navbar": {
+    "logo": "Apotheke",
+    "home": "Startseite",
+    "services": "Dienstleistungen",
+    "products": "Produkte",
+    "about": "Über Uns",
+    "contact": "Kontakt"
+  },
+
+  "Hero": {
+    "badge": "Natürliche Gesundheitsversorgung",
+    "title1": "Vertrauensvolle Pflege",
+    "title2": "Für Ihre Gesundheit",
+    "description": "Zuverlässige Apothekendienste, vertrauenswürdige Medikamente und professionelle Unterstützung für Ihre Gesundheit.",
+    "primaryButton": "Produkte Entdecken",
+    "secondaryButton": "Kontakt"
+  },
+
+   "HomePage": {
+    "title": "Hallo Welt!"
+  }
+}
